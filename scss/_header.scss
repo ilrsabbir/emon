@@ -1,0 +1,50 @@
+#header{
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000000000;
+    
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            img{
+                width: 7rem;
+                cursor: pointer;
+            }
+        }
+        .menu-icon{
+            font-size: 1.5rem;
+            color: $color1;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            display: none;
+        }
+        #menu{
+            display: flex;
+            align-items:center;
+            nav{
+                ul{
+                    display: flex;
+                    gap: 40px;
+                    li{
+                        a{
+                            font-size: 1.3rem;
+                            text-transform: capitalize;
+                            font-family: monospace;
+                            transition: .2s all;
+                        }
+                        a:hover,
+                        a.active{
+                            color: $color2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

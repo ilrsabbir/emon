@@ -1,0 +1,126 @@
+$bg: #081b29;
+$bg2: #112e42;
+$btn: #00acf4;
+$color1: #e8ebf2;
+$color2: #081b29;
+$color2: #00acf4;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: $bg;
+}
+h1,h2,h3,h4,h5,h6,p,span{
+    margin: 0;
+    padding: 0;
+}
+.margin20{
+    margin-left: 20px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: $color1;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.btn1,
+.btn2{
+    padding: 5px 20px;
+    background: $btn;
+    border: 2px solid $btn;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.btn1:hover{
+    color: #00acf4;
+}
+.btn1::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: $bg;
+    z-index: -1;
+    transition: .3s all; 
+}
+.btn2 {
+    background: transparent !important;
+    color: $btn;
+}
+.btn2:hover{
+    color: $bg !important;
+}
+.btn2::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: $btn;
+    z-index: -1;
+    transition: .3s all;
+}
+.btn1:hover::before,
+.btn2:hover::before{
+    width: 100%;
+}
+
+.title{
+    h2{
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 30px;
+        color: white;
+        font-size: 3rem;
+        font-weight: 700;
+        span{
+            color: $btn;
+        }
+    }
+}
+
+.sticky{
+    background: #112e42;
+    border-bottom: 3px solid $color2;
+    animation: slideDown .5s;
+}
+
+.topscroll{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    background: $bg2;
+    border: 2px solid $btn;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}

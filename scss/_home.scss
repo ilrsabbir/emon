@@ -1,0 +1,77 @@
+#home{
+    width: 100%;
+    min-height: 100vh;
+    .home{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $color1;
+        height: 100vh;
+        .home-details{
+            
+            h1{
+                font-size: 3rem;
+                font-weight: 700;
+                line-height: 3rem;
+            }
+            .text-animation{
+                position: relative;
+                width: fit-content;
+                span{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: transparent;
+                    -webkit-text-stroke: 1px $color2;
+                    background-image: linear-gradient($btn,$btn);
+                    background-repeat: no-repeat;
+                    -webkit-background-clip: text;
+                    background-position: 0 0;
+                    animation: homeBgText 6s linear infinite;
+                }
+                span::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    border-right: 2px solid $btn;
+                    z-index: -1;
+                    animation: homeCursorText 6s linear infinite;
+                }
+            }
+            
+            p{
+                font-size: 1rem;
+                padding: 1.5rem 0;
+                width: 60%;
+            }
+            
+        }
+        .icons{
+            position: absolute;
+            bottom: 2rem;
+            left: 7.5%;
+            display: flex;
+            gap: 20px;
+            i{
+                height: 40px;
+                width: 40px;
+                background: transparent;
+                border: 2px solid $btn;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                color: $btn;
+                transition: .3s color ease-in-out;
+            }
+            i:hover{
+                background: $btn;
+                color: $bg;
+            }
+        }
+        
+        
+    }
+}

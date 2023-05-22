@@ -1,0 +1,50 @@
+@keyframes about-spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+} 
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+}
+
+
+
+@keyframes homeBgText {
+    0%,
+    10%,
+    100%{
+        background-position: -21rem 0;
+    }
+    65%,
+    85%{
+        background-position: 0 0;
+    }
+}
+
+
+@keyframes homeCursorText {
+    0%,
+    10%,
+    100%{
+        width: 0;
+    }
+    65%,
+    78%,
+    85%{
+        width: 100%;
+        opacity: 1;
+    }
+    75%,
+    81%{
+        opacity: 0;
+    }
+}

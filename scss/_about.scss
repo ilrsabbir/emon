@@ -1,0 +1,46 @@
+#about{
+    height: fit-content;
+    width: 100%;
+    background-color: $bg2;
+    padding-bottom: 5rem;
+    .about-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img{
+            width: 120px;
+            height: 120px;
+            border: 1px solid $btn;
+            border-radius: 50%;
+            
+        }
+        .circle-animation{
+            height: 140px;
+            width: 140px;
+            border-top: 1px solid $btn;
+            border-bottom: 1px solid $btn;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0);
+            animation: about-spin 2s linear infinite;
+        }
+    }
+    .about-details{
+        text-align: center;
+        h1{
+            color: white;        
+            padding: 20px 0;
+        }
+        p{
+            color: white;
+            padding-bottom: 30px;
+            font-size: 1rem;
+        }
+
+    }
+}
